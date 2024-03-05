@@ -1,14 +1,9 @@
 #!/bin/bash
-# Allow personal logging directly from a call to this script
 
-# Create log if it doesn't exist
-if [ ! -f log.txt ]; then
-    echo "Creating log..."
-    touch log.txt
+log_file="log.txt"
+log_entry="This is a log entry."
 
-    # Need empty space for sed to work
-    echo " " > log.txt
-fi
+echo "$(date +"[%Y-%m-%d %H:%M:%S]") $log_entry" >> "$log_file"
 
-# Log from command line
-sed -i "1s;^;$(date +"%D %H:%M"): $1\n;" log.txt
+git add "$log_file" && git commit -m "Added log entry with timestamp" && git push origin main
+
