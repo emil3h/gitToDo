@@ -1,7 +1,13 @@
 #!/bin/bash
 
 log_file="log.txt"
-log_entry="This is a log entry."
+log_entry="$1"
+
+# Check if log entry text is provided
+if [ -z "$log_entry" ]; then
+    echo "Usage: $0 <log_entry>"
+    exit 1
+fi
 
 echo "$(date +"[%Y-%m-%d %H:%M:%S]") $log_entry" >> "$log_file"
 
