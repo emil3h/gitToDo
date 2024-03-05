@@ -1,5 +1,4 @@
-# gitToDo
-## Testing this out below:
+# bashLogger
+## How to run:
 
-- [ ] learn react 
-- [ ] CS4650 HW#2
+`./log.bash "enter log text..."`
