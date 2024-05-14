@@ -1,4 +1,5 @@
 # bashLogger
-## How to run:
+## Steps to run:
+Open your bash terminal and enter the following command:
 
-`./log.bash "enter log text..."`
+`./log.bash "type log message here..."`
